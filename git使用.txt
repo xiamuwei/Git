@@ -7,7 +7,7 @@ yum install -y git
 	git config --global user.name "root"      // 配置个人的用户名
 	git config --global user.email "2827210233@qq.com"      // 配置电子邮件地址
 	
-3、新建一个本地文件夹，cd进去，然后 init建仓
+3、新建一个本地文件夹，cd进去，然后 init建仓  // .git 子目录，这就是Git仓库
 	git init
 
 4、在仓库目录下编写文件
@@ -21,12 +21,13 @@ yum install -y git
 7、提交代码到缓存区
 	git commit -m '描述'  （建议每次提交添加描述，写明本次修改内容）
 
-8、提交到远程仓库
-	git remote add 用户名 http://47.104.x.x:8100/root/yoyo.git（此处通过project内的clone下的clone with http选项获取，记得修改ip地址）
+8、添加远程仓库
+	git remote add 后面链接远程仓库的别名 http://47.104.x.x:8100/root/yoyo.git（此处通过project内的clone下的clone with http选项获取，记得修改ip地址）
 
 	如：http://gitlab.example.com/root/michael-test.git 修改为http://10.3.6.24/root/michael-test.git
 
 	注意：提交到gihub报错:fatal: remote origin already exists.
+	git remote -v 查看远程库的信息
 	翻译过来就是远程源码已经存在
 	执行命令：$ git remote rm origin
 	删除远程源
